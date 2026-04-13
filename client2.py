@@ -3,6 +3,7 @@ import Demo
  
 communicator = Ice.initialize(sys.argv)
 
+#inserir ip da máquina na qual o código vai rodar no lugar de 98.90.53.6 nas linhas abaixo
 base1 = communicator.stringToProxy("SimplePrinter1:tcp -h 98.90.53.6 -p 11000")
 base2 = communicator.stringToProxy("SimplePrinter2:tcp -h 98.90.53.6 -p 11000")
 printer1 = Demo.PrinterPrx.checkedCast(base1)
